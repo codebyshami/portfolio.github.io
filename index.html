@@ -1,23 +1,4 @@
-<?php
-$show="";
-if (isset($_POST["submit"])) {
-  $ToEmail = 'ehteshamanwar96@gmail.com';
-  $Subject = $_POST["subject"];
-  $mailheader = "From: " . $_POST["email"] . "\r\n";
-  $MESSAGE_BODY = "Name: " . $_POST["name"] . "";
-  $MESSAGE_BODY .= "Email: " . $_POST["email"] . "";
-  $MESSAGE_BODY .= "Message: " . nl2br($_POST["message"]) . "";
-  $results = mail($ToEmail, $Subject, $MESSAGE_BODY, $mailheader);
-  if (!$results) {
-    $show = "Failed to send message";
-  } else {
-    $show = "Your message send successfully";
-  }
-}
 
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
